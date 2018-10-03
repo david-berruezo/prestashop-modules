@@ -14,6 +14,7 @@ class Belvg_testimonials extends Module{
     public $status                 = "";
     public $date_add               = "";
     public $date_upd               = "";
+    public $product_name           = "";
 
     public function __construct(){
         $this->name      = 'belvg_testimonials';
@@ -40,6 +41,8 @@ class Belvg_testimonials extends Module{
     public function uninstall(){
         if (!parent::uninstall())
             return false;
+        if (!$this->uninstallTab('AdminBelvg_testimonials'))
+		    return false;
         // All went well!
 		return true;    
     }
@@ -90,6 +93,12 @@ class Belvg_testimonials extends Module{
 		$tab = new Tab((int)$id_tab);
 		// Delete it
 		return $tab->delete();
+    }
+
+    public function loadProductName()
+    {
+        $product = new Product($this->id_product, true, Context::getContext()->cookie->id_lang);
+        $this->product_name = $product->name;
     }
 
     public function getContent(){
