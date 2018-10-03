@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>myadminsololink</name>
+	<displayName><![CDATA[myadminsololink es sistema de menus]]></displayName>
+	<version><![CDATA[0.4]]></version>
+	<description><![CDATA[myadminsololink es sistema de menus]]></description>
+	<author><![CDATA[David Berruezo]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>
