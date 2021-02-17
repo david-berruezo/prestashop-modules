@@ -1,18 +1,20 @@
 <?php
 
-class hooksmanager extends Module
+class Phpandfrhooksmanager extends Module
 {
 
     function __construct()
     {
         ini_set("display_errors", 0);
         error_reporting(0); //E_ALL  	   
-        $this->name = 'hooksmanager';
+        $this->name = 'phpandfrhooksmanager';
         $this->tab = 'administration';
         $this->version = '1.0';
         $this->author = 'PhPAndFriends';
         $this->psver = $this->psversion();
+
         parent::__construct();
+
         $this->bootstrap = true;
         $this->displayName = $this->l('Hooks Manager');
         $this->description = $this->l('Manage hooks that are available in your store. Add and remove any hook you want.');
@@ -256,10 +258,13 @@ class hooksmanager extends Module
         {
             $output = '';
             $output .= '<div class="conf confirm"><img src="../img/admin/ok.gif" alt="" /></div>';
+
             Db::getInstance()->execute('DELETE FROM `' . _DB_PREFIX_ . 'ppb_block` WHERE id=' . Tools::getValue('removeblock') . ' ');
         }
+
         return $output . $this->displayForm();
     }
+
 
     public function displayForm()
     {
