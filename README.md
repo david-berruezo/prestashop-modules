@@ -249,5 +249,5 @@ Los módulos de PrestaShop se enganchan al sistema mediante **hooks**. Estos son
 - Website: [davidberruezo.com](https://www.davidberruezo.com)
 
 #### 01.- Mypresta | Template monster | Mypresta modules<br>
-![Screenshot](/data_model.gif)<br>
+
 	
